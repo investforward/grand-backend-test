@@ -18,3 +18,13 @@ Route::get('/', function () {
 Route::get('instructions', function() {
     return view('test-instructions');
 });
+
+Route::get('average', function() {
+  return view('average', ['numbers' => Numbers::generateArray()]);
+});
+
+Route::get('median', function() {
+  return view('median', ['numbers' => Numbers::generateArray()]);
+});
+
+
