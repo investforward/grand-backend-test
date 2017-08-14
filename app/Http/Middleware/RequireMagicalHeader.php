@@ -15,7 +15,7 @@ class RequireMagicalHeader
      */
     public function handle($request, Closure $next)
     {
-        if(!$request->headers->has('magical-header')) {
+        if (!$request->headers->has('magical-header')) {
             abort(418, 'Unauthorized');
         }
         return $next($request);
