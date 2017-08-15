@@ -20,4 +20,16 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testGetAverageRoute(){
+        $response = $this->get('/getAverage');
+
+        $response->assertStatus(200);
+    }
+
+    public function testGetMedianRoute(){
+        $response = $this->get('/getMedian');
+
+        $response->assertStatus(200);
+    }
 }
